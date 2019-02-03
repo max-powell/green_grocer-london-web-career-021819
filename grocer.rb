@@ -17,14 +17,11 @@ end
 
 def apply_coupons(cart, coupons)
   coupons.each do |coupon|
-    if cart.keys.include?("#{coupon[:item]} W/COUPON")
-      binding.pry
-      if cart[coupon[:item]] >= coupon[:num]
-        cart["#{coupon[:item]} W/COUPON"][:count] += 1
-        cart[coupon[:item]][:count] -= coupon[:num]
-      end
+    if cart[coupon[:item]] >= coupon[:num]
+      cart["#{coupon[:item]} W/COUPON"][:count] += 1
+      cart[coupon[:item]][:count] -= coupon[:num]
     else
-      if cart.keys.include?(coupon[:item]) && cart[coupon[:item]] >= coupon[:num]
+      if cart.keys.include?(coupon[:item])
         cart["#{coupon[:item]} W/COUPON"] = {
           price: coupon[:cost],
           clearance: cart[coupon[:item]][:clearance],
