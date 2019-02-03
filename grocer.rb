@@ -43,7 +43,5 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  if cart.length > 1
-    binding.pry
-  end
+  consolidate_cart(cart)
 end
