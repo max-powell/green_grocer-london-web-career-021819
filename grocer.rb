@@ -21,7 +21,8 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon|
     cart["#{coupon[:item]} W/COUPON"] = {
       price: coupon[:cost],
-      clearance: cart[coupon[:item]][:clearance]
+      clearance: cart[coupon[:item]][:clearance],
+      count: 1
     }
   end
   # remove coupned item
