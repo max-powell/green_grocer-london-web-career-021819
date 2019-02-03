@@ -24,8 +24,7 @@ def apply_coupons(cart, coupons)
       count: 1
     }
   end
-  binding.pry
-  # remove coupned item
+  # remove couponed item
 end
 
 def apply_clearance(cart)
