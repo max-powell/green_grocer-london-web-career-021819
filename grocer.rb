@@ -25,6 +25,7 @@ def apply_coupons(cart, coupons)
     }
   end
   # remove couponed item
+
 end
 
 def apply_clearance(cart)
