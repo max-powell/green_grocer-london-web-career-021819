@@ -18,7 +18,8 @@ end
 def apply_coupons(cart, coupons)
   binding.pry
   # add coupon
-  cart["#{coupons[:item]} W/COUPON"] = []
+  coupons.each do |coupon\
+  end
   # remove coupned item
 end
 
