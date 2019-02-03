@@ -23,7 +23,7 @@ def apply_coupons(cart, coupons)
       clearance: cart[coupon[:item]][:clearance],
       count: 1
     }
-    cart[coupon[:item]][:count] -= coupon[:cost]
+    cart[coupon[:item]][:count] -= coupon[:num]
   end
   binding.pry
 end
