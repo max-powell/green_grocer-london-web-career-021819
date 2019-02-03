@@ -18,6 +18,7 @@ end
 def apply_coupons(cart, coupons)
   coupons.each do |coupon|
     if cart.keys.include?("#{coupon[:item]} W/COUPON")
+      binding.pry
       if cart[coupon[:item]] >= coupon[:num]
         cart["#{coupon[:item]} W/COUPON"][:count] += 1
         cart[coupon[:item]][:count] -= coupon[:num]
