@@ -16,7 +16,6 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  binding.pry
   coupons.each do |coupon|
     cart["#{coupon[:item]} W/COUPON"] = {
       price: coupon[:cost],
