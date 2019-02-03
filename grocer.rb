@@ -4,6 +4,8 @@ def consolidate_cart(cart)
   new_cart = {}
   cart.each do |hash|
     hash.each do |item, details|
+      if new_cart.keys.include?(item)
+      else
       new_cart[item] = details
   end
 end
