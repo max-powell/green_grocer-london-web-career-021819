@@ -5,8 +5,10 @@ def consolidate_cart(cart)
   cart.each do |hash|
     hash.each do |item, details|
       if new_cart.keys.include?(item)
+        new_cart[item][:count] += 1
       else
       new_cart[item] = details
+      new_cart[item][:count] = 1
   end
 end
 
