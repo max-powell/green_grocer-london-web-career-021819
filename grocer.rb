@@ -20,7 +20,7 @@ def apply_coupons(cart, coupons)
     binding.pry
     if cart.keys.include?("#{coupon[:item]} W/COUPON")
       #old coupon
-      binding.pry
+    else
       #new coupon
       if cart.keys.include?(coupon[:item])
         cart["#{coupon[:item]} W/COUPON"] = {
