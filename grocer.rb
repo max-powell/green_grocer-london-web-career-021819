@@ -16,7 +16,10 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  # code here
+  # add coupon
+  cart["#{coupons[:item]} W/COUPON"] = []
+  binding.pry
+  # remove coupned item
 end
 
 def apply_clearance(cart)
