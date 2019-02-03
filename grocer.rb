@@ -17,8 +17,9 @@ end
 
 def apply_coupons(cart, coupons)
   coupons.each do |coupon|
-    if true
+    if cart.keys.include?("#{coupon[:item]} W/COUPON")
       #old coupon
+      binding.pry
       #new coupon
       if cart.keys.include?(coupon[:item])
         cart["#{coupon[:item]} W/COUPON"] = {
