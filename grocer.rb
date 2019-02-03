@@ -26,7 +26,7 @@ def apply_coupons(cart, coupons)
     cart[coupon[:item]][:count] -= coupon[:cost]
   end
   # remove couponed item
-  
+
 end
 
 def apply_clearance(cart)
