@@ -19,8 +19,9 @@ def apply_coupons(cart, coupons)
   binding.pry
   # add coupon
   coupons.each do |coupon|
-    cart["#{coupon[:item]} W/AVOCADO"] = {
-      price: coupon[:cost]
+    cart["#{coupon[:item]} W/COUPON"] = {
+      price: coupon[:cost],
+      clearance: cart[coupon[:item]][:clearance]
     }
   end
   # remove coupned item
